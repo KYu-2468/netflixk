@@ -1,13 +1,15 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-// import Movies from "./components/Movies";
+import Movies from "./components/Movies";
+import Hero from "./components/Hero";
+import Header from "./components/Header";
 
 // AWS Authenticator
 import { withAuthenticator, Button, Heading } from "@aws-amplify/ui-react";
 import "@aws-amplify/ui-react/styles.css";
 
 const URL = "https://api.themoviedb.org/3";
-const API_KEY = "Put your API key here";
+const API_KEY = "d4549a0d743df214c56fc1e2e70655e2";
 
 const endpoints = {
   originals: "/discover/tv",
@@ -25,24 +27,71 @@ function App({ signOut, user }) {
   const [popular, setPopular] = useState([]);
   const [topRated, setTopRated] = useState([]);
   const [upcoming, setUpcoming] = useState([]);
-  console.log(user, signOut);
-  // useEffect(() => {
-  //   // Load Originals
-  //   axios
-  //     .get(`${URL}${endpoints.originals}`, {
-  //       params: {
-  //         api_key: API_KEY,
-  //       },
-  //     })
-  //     .then((res) => setOriginals(res.data.results));
 
-  //   // Get other categories with the same pattern here
-  // }, []);
+  useEffect(() => {
+    // Load Originals
+    axios
+      .get(`${URL}${endpoints.originals}`, {
+        params: {
+          api_key: API_KEY,
+        },
+      })
+      .then((res) => setOriginals(res.data.results));
+
+    axios
+      .get(`${URL}${endpoints.trending}`, {
+        params: {
+          api_key: API_KEY,
+        },
+      })
+      .then((res) => setTrending(res.data.results));
+
+    axios
+      .get(`${URL}${endpoints.now_playing}`, {
+        params: {
+          api_key: API_KEY,
+        },
+      })
+      .then((res) => setNowPlaying(res.data.results));
+
+    axios
+      .get(`${URL}${endpoints.popular}`, {
+        params: {
+          api_key: API_KEY,
+        },
+      })
+      .then((res) => setPopular(res.data.results));
+
+    axios
+      .get(`${URL}${endpoints.top_rated}`, {
+        params: {
+          api_key: API_KEY,
+        },
+      })
+      .then((res) => setTopRated(res.data.results));
+
+    axios
+      .get(`${URL}${endpoints.upcoming}`, {
+        params: {
+          api_key: API_KEY,
+        },
+      })
+      .then((res) => setUpcoming(res.data.results));
+
+    // Get other categories with the same pattern here
+  }, []);
 
   return (
     <>
-      {/* <Movies title="Netflix originals" movies={originals} /> */}
-      <Heading level={1}>Hello {user.username}</Heading>
+      <Header />
+      <Hero movie={originals[Math.floor(Math.random() * originals.length)]} />
+      <Movies title="NETFLIX ORIGINALS" movies={originals} />
+      <Movies title="TRENDING" movies={trending} />
+      <Movies title="NOW PLAYING" movies={nowPlaying} />
+      <Movies title="POPULAR" movies={popular} />
+      <Movies title="TOP RATED" movies={topRated} />
+      <Movies title="UPCOMING" movies={upcoming} />
+      {/* <Heading level={1}>Hello {user.username}</Heading> */}
       <Button onClick={signOut}>Sign out</Button>
     </>
   );
