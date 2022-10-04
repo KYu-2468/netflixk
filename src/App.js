@@ -95,6 +95,7 @@ function App({ signOut, user }) {
   return (
     <>
       <Header />
+
       <Hero movie={originals[Math.floor(Math.random() * originals.length)]} />
       <Movies title="NETFLIX ORIGINALS" movies={originals} />
       <Movies title="TRENDING" movies={trending} />

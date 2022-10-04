@@ -7,8 +7,8 @@ import { getVideoId } from "../globalFunctions";
 const Trailer = ({ movie }) => {
   const [videoURL, setVideoURL] = useState("");
   const opts = {
-    height: "432",
-    width: "768",
+    height: window.innerHeight < 700 ? "300" : "480",
+    width: window.innerWidth < 600 ? "300" : "854",
     playerVars: {
       // https://developers.google.com/youtube/player_parameters
       autoplay: 0,

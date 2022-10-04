@@ -12,8 +12,8 @@ import Popup from "reactjs-popup";
 function Hero({ movie }) {
   const [videoURL, setVideoURL] = useState("");
   const opts = {
-    height: "432",
-    width: "768",
+    height: window.innerHeight < 700 ? "300" : "480",
+    width: window.innerWidth < 600 ? "300" : "854",
     playerVars: {
       // https://developers.google.com/youtube/player_parameters
       autoplay: 0,
@@ -35,7 +35,12 @@ function Hero({ movie }) {
   return (
     <HeroContainer background={movie?.backdrop_path}>
       <HeroTitle>{movie?.name}</HeroTitle>
-      <HeroDescription>{movie?.overview}</HeroDescription>
+      {window.innerWidth < 600 ? (
+        <></>
+      ) : (
+        <HeroDescription>{movie?.overview}</HeroDescription>
+      )}
+
       <Popup
         trigger={<HeroButton>Play</HeroButton>}
         position="right center"
