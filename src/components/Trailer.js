@@ -8,7 +8,7 @@ const Trailer = ({ movie }) => {
   const [videoURL, setVideoURL] = useState("");
   const opts = {
     height: window.innerHeight < 700 ? "300" : "480",
-    width: window.innerWidth < 600 ? "300" : "854",
+    width: window.innerWidth < 600 ? "300" : "800",
     playerVars: {
       // https://developers.google.com/youtube/player_parameters
       autoplay: 0,

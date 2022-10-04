@@ -36,3 +36,7 @@
     transform: rotate(360deg);
   }
 }
+
+.amplify-auth {
+  background-image: url("/images/NetflixK.png");
+}

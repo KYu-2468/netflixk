@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { HeaderContainer } from "./Header.styles";
+import Signin from "./Signin";
 
 function Header() {
   const [isDark, setIsDark] = useState(false);
@@ -24,6 +25,7 @@ function Header() {
         src="https://upload.wikimedia.org/wikipedia/commons/6/67/NewNetflixLogo.png"
         alt=""
       />
+      <Signin />
     </HeaderContainer>
   );
 }

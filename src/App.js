@@ -6,8 +6,8 @@ import Header from "./components/Header";
 import "./App.css";
 
 // AWS Authenticator
-import { withAuthenticator, Button, Heading } from "@aws-amplify/ui-react";
-import "@aws-amplify/ui-react/styles.css";
+// import { withAuthenticator, Button, Heading } from "@aws-amplify/ui-react";
+// import "@aws-amplify/ui-react/styles.css";
 
 const URL = "https://api.themoviedb.org/3";
 const API_KEY = "d4549a0d743df214c56fc1e2e70655e2";
@@ -32,14 +32,11 @@ function App({ signOut, user }) {
   useEffect(() => {
     // Load Originals
     axios
-      .get(
-        `${URL}${endpoints.originals}?api_key=${API_KEY}&include_video=true`,
-        {
-          // params: {
-          //   api_key: API_KEY,
-          // },
-        }
-      )
+      .get(`${URL}${endpoints.originals}`, {
+        params: {
+          api_key: API_KEY,
+        },
+      })
       .then((res) => {
         setOriginals(res.data.results);
       });
@@ -88,14 +85,12 @@ function App({ signOut, user }) {
         },
       })
       .then((res) => setUpcoming(res.data.results));
-
-    // Get other categories with the same pattern here
   }, []);
 
   return (
     <>
       <Header />
-
+      {/* <Signin /> */}
       <Hero movie={originals[Math.floor(Math.random() * originals.length)]} />
       <Movies title="NETFLIX ORIGINALS" movies={originals} />
       <Movies title="TRENDING" movies={trending} />
@@ -104,9 +99,9 @@ function App({ signOut, user }) {
       <Movies title="TOP RATED" movies={topRated} />
       <Movies title="UPCOMING" movies={upcoming} />
       {/* <Heading level={1}>Hello {user.username}</Heading> */}
-      <Button onClick={signOut}>Sign out</Button>
+      {/* <Button onClick={signOut}>Sign out</Button> */}
     </>
   );
 }
 
-export default withAuthenticator(App);
+export default App;
