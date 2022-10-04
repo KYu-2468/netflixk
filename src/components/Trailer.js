@@ -1,10 +1,11 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import YouTube from "react-youtube";
 import Popup from "reactjs-popup";
 import { MoviesPoster } from "./Movies.styles";
-// import "reactjs-popup/dist/index.css";
+import { getVideoId } from "../globalFunctions";
 
 const Trailer = ({ movie }) => {
+  const [videoURL, setVideoURL] = useState("");
   const opts = {
     height: "432",
     width: "768",
@@ -18,6 +19,17 @@ const Trailer = ({ movie }) => {
     // access to player in all event handlers via event.target
     event.target.pauseVideo();
   };
+
+  useEffect(() => {
+    if (!movie) return;
+    let url = null;
+    (async () => {
+      url = await getVideoId(movie);
+      console.log("url: ", url);
+      setVideoURL(url);
+    })();
+  }, [movie]);
+
   if (!movie.poster_path) return <></>;
 
   return (
@@ -32,7 +44,7 @@ const Trailer = ({ movie }) => {
         position="right center"
         modal
       >
-        <YouTube videoId={movie.videoId} opts={opts} onReady={_onReady} />
+        <YouTube videoId={videoURL} opts={opts} onReady={_onReady} />
       </Popup>
     </>
   );

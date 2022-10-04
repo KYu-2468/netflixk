@@ -32,11 +32,14 @@ function App({ signOut, user }) {
   useEffect(() => {
     // Load Originals
     axios
-      .get(`${URL}${endpoints.originals}`, {
-        params: {
-          api_key: API_KEY,
-        },
-      })
+      .get(
+        `${URL}${endpoints.originals}?api_key=${API_KEY}&include_video=true`,
+        {
+          // params: {
+          //   api_key: API_KEY,
+          // },
+        }
+      )
       .then((res) => {
         setOriginals(res.data.results);
       });
