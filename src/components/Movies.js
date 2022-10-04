@@ -12,18 +12,16 @@ function Movies({ title, movies }) {
   useEffect(() => {
     if (!movies || !movies.length) return;
     if (newMovies.length) return;
-    const urlBreakPoint = "watch?v=";
     const moviesWithVideo = [];
 
     (async () => {
       for (let i = 0; i < movies.length; i++) {
         const movie = movies[i];
         try {
+          let videoId = null;
           const res = await axios.get(
             `${URL}/movie/${movie.id}/videos?api_key=${API_KEY}`
           );
-
-          let videoId = null;
 
           res.data.results.forEach((video) => {
             if (video.type === "Trailer" && video.official) {
