@@ -1,12 +1,10 @@
-import {
-  MoviesContainer,
-  MoviesTitle,
-  MoviesRow,
-  MoviesPoster,
-} from "./Movies.styles";
-import movieTrailer from "movie-trailer";
+import { MoviesContainer, MoviesTitle, MoviesRow } from "./Movies.styles";
 import { useEffect, useState } from "react";
 import Trailer from "./Trailer";
+import axios from "axios";
+
+const URL = "https://api.themoviedb.org/3";
+const API_KEY = "d4549a0d743df214c56fc1e2e70655e2";
 
 function Movies({ title, movies }) {
   const [newMovies, setNewMovies] = useState([]);
@@ -20,12 +18,25 @@ function Movies({ title, movies }) {
     (async () => {
       for (let i = 0; i < movies.length; i++) {
         const movie = movies[i];
-        const res = await movieTrailer(null, { tmdbId: movies[i].id });
-        if (!res) continue;
-        movie.videoId = res.slice(
-          res.indexOf(urlBreakPoint) + urlBreakPoint.length
-        );
-        moviesWithVideo.push(movie);
+        try {
+          const res = await axios.get(
+            `${URL}/movie/${movie.id}/videos?api_key=${API_KEY}`
+          );
+
+          let videoId = null;
+
+          res.data.results.forEach((video) => {
+            if (video.type === "Trailer" && video.official) {
+              videoId = video.key;
+            }
+          });
+
+          if (!videoId) continue;
+          movie.videoId = videoId;
+          moviesWithVideo.push(movie);
+        } catch (error) {
+          console.log(error);
+        }
       }
     })();
 
@@ -37,11 +48,7 @@ function Movies({ title, movies }) {
       <MoviesTitle>{title}</MoviesTitle>
       <MoviesRow>
         {newMovies.map((movie) => {
-          return (
-            <>
-              <Trailer movie={movie} />
-            </>
-          );
+          return <Trailer movie={movie} key={movie.id} />;
         })}
       </MoviesRow>
     </MoviesContainer>

@@ -7,8 +7,10 @@ export const HeroContainer = styled.div`
   height: 80vh;
   background-size: cover !important;
 
-  ${(props) =>
-    `background: url('https://image.tmdb.org/t/p/original${props.background}');`}
+  ${(props) => {
+    if (!props || !props.background) return;
+    return `background: url('https://image.tmdb.org/t/p/original${props.background}');`;
+  }}
 `;
 
 export const HeroTitle = styled.h1`
