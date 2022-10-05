@@ -12,7 +12,7 @@
   <p align="center">
     An awesome Netflix clone built with React, Tailwind, AWS Amplify, and TMDB!
     <br />
-    <a href="https://github.com/KYu-2468/netflixk/demo">View Demo</a>
+    <a href="main.dk22od2tuez03.amplifyapp.com/">View Demo</a>
     ·
     <a href="https://github.com/KYu-2468/netflixk/issues">Request Feature</a>
   </p>
