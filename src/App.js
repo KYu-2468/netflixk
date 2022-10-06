@@ -21,7 +21,7 @@ const endpoints = {
   upcoming: "/movie/upcoming",
 };
 
-function App({ signOut, user }) {
+function App() {
   const [originals, setOriginals] = useState([]);
   const [trending, setTrending] = useState([]);
   const [nowPlaying, setNowPlaying] = useState([]);
