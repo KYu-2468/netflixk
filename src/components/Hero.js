@@ -44,7 +44,9 @@ function Hero({ movie }) {
         )}
 
         <Popup
-          trigger={<HeroButton>Play</HeroButton>}
+          trigger={
+            <HeroButton style={{ backgroundColor: "white" }}>Play</HeroButton>
+          }
           position="right center"
           modal
         >
