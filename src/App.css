@@ -40,3 +40,18 @@
 .amplify-auth {
   background-image: url("/images/NetflixK.png");
 }
+
+.background-faded {
+  position: absolute;
+  height: 100px;
+  width: 100%;
+  background-image: linear-gradient(
+    rgba(255, 0, 0, 0),
+    rgba(255, 0, 0, 0),
+    rgba(255, 0, 0, 0),
+    rgba(255, 0, 0, 0),
+    rgba(255, 0, 0, 0),
+    #111
+  );
+  padding-top: 80vh;
+}

@@ -33,24 +33,25 @@ function Hero({ movie }) {
   }, [movie]);
 
   return (
-    <HeroContainer background={movie?.backdrop_path}>
-      <HeroTitle>{movie?.name}</HeroTitle>
-      {window.innerWidth < 600 ? (
-        <></>
-      ) : (
-        <HeroDescription>{movie?.overview}</HeroDescription>
-      )}
+    <>
+      <div className="background-faded"></div>
+      <HeroContainer background={movie?.backdrop_path}>
+        <HeroTitle>{movie?.name}</HeroTitle>
+        {window.innerWidth < 600 ? (
+          <></>
+        ) : (
+          <HeroDescription>{movie?.overview}</HeroDescription>
+        )}
 
-      <Popup
-        trigger={<HeroButton>Play</HeroButton>}
-        position="right center"
-        modal
-      >
-        <YouTube videoId={videoURL} opts={opts} onReady={_onReady} />
-      </Popup>
-
-      {/* <HeroButton>My List</HeroButton> */}
-    </HeroContainer>
+        <Popup
+          trigger={<HeroButton>Play</HeroButton>}
+          position="right center"
+          modal
+        >
+          <YouTube videoId={videoURL} opts={opts} onReady={_onReady} />
+        </Popup>
+      </HeroContainer>
+    </>
   );
 }
 
