@@ -25,7 +25,6 @@ const Trailer = ({ movie }) => {
     let url = null;
     (async () => {
       url = await getVideoId(movie);
-      console.log("url: ", url);
       setVideoURL(url);
     })();
   }, [movie]);

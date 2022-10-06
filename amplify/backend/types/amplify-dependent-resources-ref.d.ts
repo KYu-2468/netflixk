@@ -3,6 +3,8 @@ export type AmplifyDependentResourcesAttributes = {
         "netflixk7ba7cc40": {
             "IdentityPoolId": "string",
             "IdentityPoolName": "string",
+            "HostedUIDomain": "string",
+            "OAuthMetadata": "string",
             "UserPoolId": "string",
             "UserPoolArn": "string",
             "UserPoolName": "string",
