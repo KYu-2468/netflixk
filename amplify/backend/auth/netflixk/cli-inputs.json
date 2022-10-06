@@ -1,10 +1,10 @@
 {
   "version": "1",
   "cognitoConfig": {
-    "identityPoolName": "netflixk7ba7cc40_identitypool_7ba7cc40",
+    "identityPoolName": "testAuthIdentityPool",
     "allowUnauthenticatedIdentities": false,
-    "resourceNameTruncated": "netfli7ba7cc40",
-    "userPoolName": "netflixk7ba7cc40_userpool_7ba7cc40",
+    "resourceNameTruncated": "netfli72233615",
+    "userPoolName": "netflixk",
     "autoVerifiedAttributes": [
       "email"
     ],
@@ -20,6 +20,7 @@
     "passwordPolicyMinLength": 8,
     "passwordPolicyCharacters": [],
     "requiredAttributes": [
+      "name",
       "email"
     ],
     "aliasAttributes": [],
@@ -27,17 +28,29 @@
     "userpoolClientRefreshTokenValidity": 30,
     "userpoolClientWriteAttributes": [],
     "userpoolClientReadAttributes": [],
-    "userpoolClientLambdaRole": "netfli7ba7cc40_userpoolclient_lambda_role",
+    "userpoolClientLambdaRole": "netfli72233615_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": false,
-    "sharedId": "7ba7cc40",
-    "resourceName": "netflixk7ba7cc40",
+    "sharedId": "72233615",
+    "resourceName": "netflixk",
     "authSelections": "identityPoolAndUserPool",
-    "useDefault": "defaultSocial",
+    "serviceName": "Cognito",
     "usernameAttributes": [
       "email"
     ],
+    "useDefault": "manual",
+    "userPoolGroups": false,
     "userPoolGroupList": [],
-    "serviceName": "Cognito",
+    "adminQueries": false,
+    "thirdPartyAuth": false,
+    "authProviders": [],
+    "hostedUI": true,
+    "hostedUIDomainName": "netflixkf037f6ca-f037f6ca",
+    "authProvidersUserPool": [
+      "Facebook",
+      "Google"
+    ],
+    "hostedUIProviderMeta": "[{\"ProviderName\":\"Facebook\",\"authorize_scopes\":\"public_profile,email\",\"AttributeMapping\":{\"name\":\"name\",\"email\":\"email\",\"username\":\"id\"}},{\"ProviderName\":\"Google\",\"authorize_scopes\":\"openid profile email\",\"AttributeMapping\":{\"name\":\"name\",\"email\":\"email\",\"username\":\"sub\"}}]",
+    "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"https://main.dk22od2tuez03.amplifyapp.com/\"],\"LogoutURLs\":[\"https://main.dk22od2tuez03.amplifyapp.com/\"]}",
     "usernameCaseSensitive": false,
     "useEnabledMfas": true,
     "authRoleArn": {
@@ -53,17 +66,6 @@
       ]
     },
     "breakCircularDependency": true,
-    "dependsOn": [],
-    "userPoolGroups": false,
-    "adminQueries": false,
-    "hostedUI": true,
-    "hostedUIDomainName": "netflixkf037f6ca-f037f6ca",
-    "authProvidersUserPool": [
-      "Facebook",
-      "Google"
-    ],
-    "hostedUIProviderMeta": "[{\"ProviderName\":\"Facebook\",\"authorize_scopes\":\"email,public_profile\",\"AttributeMapping\":{\"email\":\"email\",\"username\":\"id\"}},{\"ProviderName\":\"Google\",\"authorize_scopes\":\"openid email profile\",\"AttributeMapping\":{\"email\":\"email\",\"username\":\"sub\"}}]",
-    "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"http://localhost:3000/\",\"https://main.dk22od2tuez03.amplifyapp.com/\"],\"LogoutURLs\":[\"http://localhost:3000/\",\"https://main.dk22od2tuez03.amplifyapp.com/\"]}",
-    "authProviders": []
+    "dependsOn": []
   }
 }

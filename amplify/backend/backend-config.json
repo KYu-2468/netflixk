@@ -1,6 +1,6 @@
 {
   "auth": {
-    "netflixk7ba7cc40": {
+    "netflixk": {
       "service": "Cognito",
       "providerPlugin": "awscloudformation",
       "dependsOn": [],
@@ -14,6 +14,7 @@
           "EMAIL"
         ],
         "signupAttributes": [
+          "NAME",
           "EMAIL"
         ],
         "passwordProtectionSettings": {

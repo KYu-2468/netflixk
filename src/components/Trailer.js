@@ -43,7 +43,9 @@ const Trailer = ({ movie }) => {
         position="right center"
         modal
       >
-        <YouTube videoId={videoURL} opts={opts} onReady={_onReady} />
+        <div className="video">
+          <YouTube videoId={videoURL} opts={opts} onReady={_onReady} />
+        </div>
       </Popup>
     </>
   );
