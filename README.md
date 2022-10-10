@@ -38,9 +38,13 @@
 
 ## About The Project
 
+Netflix is one of the most popular streaming services currently available in the market. This project aims to clone Netflix for personal learning purposes. All current videos are trailers of the corresponding movies. This project doesn't intend to provide the actual movie footage due to copyright reasons.
+
 [![NetflixK][product-screenshot]](https://main.dk22od2tuez03.amplifyapp.com/)
 
-Netflix is one of the most popular streaming services currently available in the market. This project aims to clone Netflix for personal learning purposes. All current videos are trailers of the corresponding movies. This project doesn't intend to provide the actual movie footage due to copyright reasons.
+[![NetflixK][product-screenshot2]](https://main.dk22od2tuez03.amplifyapp.com/)
+
+[![NetflixK][product-screenshot3]](https://main.dk22od2tuez03.amplifyapp.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -50,6 +54,7 @@ Netflix is one of the most popular streaming services currently available in the
 - [![Tailwind][tailwind.js]][tailwind-url]
 - [![AWS][aws]][aws-url]
 - [![TMDB][tmdb]][tmdb-url]
+- [![Youtube][youtube]][youtube-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -66,11 +71,15 @@ Project Link: [https://github.com/KYu-2468/netflixk](https://github.com/KYu-2468
 <!-- MARKDOWN LINKS & IMAGES -->
 
 [product-screenshot]: images/NetflixK.png
-[react.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[product-screenshot2]: images/Netflixk-2.png
+[product-screenshot3]: images/Trailer3.png
+[react.js]: images/react.png
 [react-url]: https://reactjs.org/
-[tailwind.js]: https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg
+[tailwind.js]: images/Tailwind.png
 [tailwind-url]: https://tailwindcss.com/
-[aws]: https://pbs.twimg.com/profile_images/1114309924551417856/FKA4cm2x_400x400.png
+[aws]: images/AWS-amplify.png
 [aws-url]: https://aws.amazon.com/amplify/
-[tmdb]: https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Tmdb.new.logo.svg/512px-Tmdb.new.logo.svg.png?20200406190906
+[tmdb]: images/tmdb.png
 [tmdb-url]: https://www.themoviedb.org/?language=en-US
+[youtube]: images/youtube.png
+[youtube-url]: https://www.youtube.com/
