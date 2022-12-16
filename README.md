@@ -14,8 +14,6 @@
     <br />
     <a href="https://www.youtube.com/watch?v=QuREEs3BDHQ">View Demo</a>
     ·
-    <a href="https://github.com/KYu-2468/netflixk/issues">Request Feature</a>
-    ·
     <a href="https://main.dk22od2tuez03.amplifyapp.com">Website Link</a>
   </p>
 </div>
