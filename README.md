@@ -40,21 +40,29 @@
 
 Netflix is one of the most popular streaming services currently available in the market. This project aims to clone Netflix for personal learning purposes. All current videos are trailers of the corresponding movies. This project doesn't intend to provide the actual movie footage due to copyright reasons.
 
+![](demo/Netflix_demo-2022-12-15_19.48.54.gif)
+
 [![NetflixK][product-screenshot]](https://main.dk22od2tuez03.amplifyapp.com/)
 
-[![NetflixK][product-screenshot2]](https://main.dk22od2tuez03.amplifyapp.com/)
+<!-- [![NetflixK][product-screenshot2]](https://main.dk22od2tuez03.amplifyapp.com/)
 
-[![NetflixK][product-screenshot3]](https://main.dk22od2tuez03.amplifyapp.com/)
+[![NetflixK][product-screenshot3]](https://main.dk22od2tuez03.amplifyapp.com/) -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Built With
 
-- [![React][react.js]][react-url]
+- React
+- Tailwind CSS
+- Amazon Web Service (Amplify)
+- Youtube API
+- The Movie DataBase API
+
+<!-- - [![React][react.js]][react-url]
 - [![Tailwind][tailwind.js]][tailwind-url]
 - [![AWS][aws]][aws-url]
 - [![TMDB][tmdb]][tmdb-url]
-- [![Youtube][youtube]][youtube-url]
+- [![Youtube][youtube]][youtube-url] -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
