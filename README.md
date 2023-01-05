@@ -38,9 +38,17 @@
 
 Netflix is one of the most popular streaming services currently available in the market. This project aims to clone Netflix for personal learning purposes. All current videos are trailers of the corresponding movies. This project doesn't intend to provide the actual movie footage due to copyright reasons.
 
-![](demo/Netflix_demo-2022-12-15_19.48.54.gif)
+### Watch Movies
+
+![](demo/netflix-demo-2.gif)
+
+### Home Page
 
 [![NetflixK][product-screenshot]](https://main.dk22od2tuez03.amplifyapp.com/)
+
+### Sign In With Email, Google, or Facebook Account
+
+![](demo/netflix-demo-1.gif)
 
 <!-- [![NetflixK][product-screenshot2]](https://main.dk22od2tuez03.amplifyapp.com/)
 
