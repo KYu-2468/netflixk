@@ -7,7 +7,7 @@
     <img src="images/Netflix.jpeg" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Netflix-K</h3>
+  <h3 align="center">Netflix</h3>
 
   <p align="center">
     An awesome Netflix clone built with React, Tailwind, AWS Amplify, and TMDB!
