@@ -1,0 +1,18 @@
+{
+  "trigger": true,
+  "modules": [
+    "captcha-verify"
+  ],
+  "parentResource": "netflixke5440cf5",
+  "functionName": "netflixke5440cf5VerifyAuthChallengeResponse",
+  "resourceName": "netflixke5440cf5VerifyAuthChallengeResponse",
+  "parentStack": "auth",
+  "triggerEnvs": "[]",
+  "triggerDir": "/snapshot/repo/build/node_modules/@aws-amplify/amplify-category-auth/provider-utils/awscloudformation/triggers/VerifyAuthChallengeResponse",
+  "triggerTemplate": "VerifyAuthChallengeResponse.json.ejs",
+  "triggerEventPath": "VerifyAuthChallengeResponse.event.json",
+  "roleName": "netflixke5440cf5VerifyAuthChallengeResponse",
+  "skipEdit": true,
+  "RECAPTCHASECRET": "asdfJKL;!@#123",
+  "enableCors": false
+}

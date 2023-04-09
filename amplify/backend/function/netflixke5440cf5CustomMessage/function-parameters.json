@@ -1,0 +1,21 @@
+{
+  "trigger": true,
+  "modules": [
+    "verification-link"
+  ],
+  "parentResource": "netflixke5440cf5",
+  "functionName": "netflixke5440cf5CustomMessage",
+  "resourceName": "netflixke5440cf5CustomMessage",
+  "parentStack": "auth",
+  "triggerEnvs": "[\n  {\n    \"key\": \"RESOURCENAME\",\n    \"value\": \"resourceName\"\n  }\n]",
+  "triggerDir": "/snapshot/repo/build/node_modules/@aws-amplify/amplify-category-auth/provider-utils/awscloudformation/triggers/CustomMessage",
+  "triggerTemplate": "CustomMessage.json.ejs",
+  "triggerEventPath": "CustomMessage.event.json",
+  "roleName": "netflixke5440cf5CustomMessage",
+  "skipEdit": true,
+  "REDIRECTURL": "",
+  "EMAILSUBJECT": "Confirmation from Netflx-kyu2468",
+  "EMAILMESSAGE": "Hi! Thanks for using Netflx-kyu268 for streaming movie trailers",
+  "RESOURCENAME": "resourceName",
+  "enableCors": false
+}

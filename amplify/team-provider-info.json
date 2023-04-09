@@ -1,25 +1,47 @@
 {
   "dev": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-netflixk-dev-193401-authRole",
-      "UnauthRoleArn": "arn:aws:iam::433671885904:role/amplify-netflixk-dev-193401-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::433671885904:role/amplify-netflixk-dev-193401-authRole",
+      "AuthRoleName": "amplify-netflixk-dev-181407-authRole",
+      "UnauthRoleArn": "arn:aws:iam::651255797851:role/amplify-netflixk-dev-181407-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::651255797851:role/amplify-netflixk-dev-181407-authRole",
       "Region": "us-west-1",
-      "DeploymentBucketName": "amplify-netflixk-dev-193401-deployment",
-      "UnauthRoleName": "amplify-netflixk-dev-193401-unauthRole",
-      "StackName": "amplify-netflixk-dev-193401",
-      "StackId": "arn:aws:cloudformation:us-west-1:433671885904:stack/amplify-netflixk-dev-193401/d8adfb10-42c3-11ed-b089-06edc6994eb1",
-      "AmplifyAppId": "dk22od2tuez03"
+      "DeploymentBucketName": "amplify-netflixk-dev-181407-deployment",
+      "UnauthRoleName": "amplify-netflixk-dev-181407-unauthRole",
+      "StackName": "amplify-netflixk-dev-181407",
+      "StackId": "arn:aws:cloudformation:us-west-1:651255797851:stack/amplify-netflixk-dev-181407/d45e5b10-d673-11ed-9581-0225f5e82e47",
+      "AmplifyAppId": "d3w3n4pah8m9bk",
+      "AuthTriggerTemplateURL": "https://s3.amazonaws.com/amplify-netflixk-dev-181407-deployment/amplify-cfn-templates/auth/auth-trigger-cloudformation-template.json"
     },
     "categories": {
       "auth": {
-        "netflixk7ba7cc40": {},
-        "netflixk": {}
+        "netflixke5440cf5": {}
+      },
+      "function": {
+        "netflixke5440cf5DefineAuthChallenge": {
+          "deploymentBucketName": "amplify-netflixk-dev-181407-deployment",
+          "s3Key": "amplify-builds/netflixke5440cf5DefineAuthChallenge-776938634f656d454948-build.zip"
+        },
+        "netflixke5440cf5CreateAuthChallenge": {
+          "deploymentBucketName": "amplify-netflixk-dev-181407-deployment",
+          "s3Key": "amplify-builds/netflixke5440cf5CreateAuthChallenge-66555265702f34453747-build.zip"
+        },
+        "netflixke5440cf5VerifyAuthChallengeResponse": {
+          "RECAPTCHASECRET": "asdfJKL;!@#123",
+          "deploymentBucketName": "amplify-netflixk-dev-181407-deployment",
+          "s3Key": "amplify-builds/netflixke5440cf5VerifyAuthChallengeResponse-54753844454e3476754e-build.zip"
+        },
+        "netflixke5440cf5CustomMessage": {
+          "REDIRECTURL": "",
+          "EMAILSUBJECT": "Confirmation from Netflx-kyu2468",
+          "EMAILMESSAGE": "Hi! Thanks for using Netflx-kyu268 for streaming movie trailers",
+          "deploymentBucketName": "amplify-netflixk-dev-181407-deployment",
+          "s3Key": "amplify-builds/netflixke5440cf5CustomMessage-463942724e6934566a33-build.zip"
+        }
       },
       "hosting": {
         "amplifyhosting": {
-          "appId": "dk22od2tuez03",
-          "type": "cicd"
+          "appId": "d3w3n4pah8m9bk",
+          "type": "manual"
         }
       }
     }
