@@ -14,7 +14,7 @@
     <br />
     <a href="https://www.youtube.com/watch?v=QuREEs3BDHQ">View Demo</a>
     ·
-    <a href="https://main.dk22od2tuez03.amplifyapp.com">Website Link</a>
+    <a href="https://dev.d3w3n4pah8m9bk.amplifyapp.com">Website Link</a>
   </p>
 </div>
 
@@ -44,7 +44,7 @@ Netflix is one of the most popular streaming services currently available in the
 
 ### Home Page
 
-[![NetflixK][product-screenshot]](https://main.dk22od2tuez03.amplifyapp.com/)
+[![NetflixK][product-screenshot]](https://dev.d3w3n4pah8m9bk.amplifyapp.com)
 
 ### Sign In With Email, Google, or Facebook Account
 
